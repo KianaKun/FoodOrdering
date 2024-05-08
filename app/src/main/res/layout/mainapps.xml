@@ -24,7 +24,7 @@
                 android:layout_width="127dp"
                 android:layout_height="151dp"
                 android:layout_marginTop="10dp"
-                android:layout_marginLeft="10dp"
+                android:layout_marginLeft="11dp"
                 app:srcCompat="@drawable/sop_iga" />
 
             <ImageView
