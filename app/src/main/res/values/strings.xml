@@ -97,4 +97,6 @@
     <string name="copyright_hilman_fathur_2024">Copyright Hilman Fathur 2024</string>
     <string name="nomor_meja">Nomor Meja</string>
     <string name="todo">TODO</string>
+    <string name="order">Order</string>
+    <string name="cancel">Cancel</string>
 </resources>

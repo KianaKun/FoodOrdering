@@ -1,5 +1,6 @@
 package com.example.foodordering
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
@@ -18,6 +19,8 @@ class mainapps : AppCompatActivity() {
     private lateinit var buttonMinNasiGoreng: Button
     private lateinit var buttonMinEsTeh: Button
     private lateinit var buttonMinEsJeruk: Button
+    private lateinit var buttonSubmit: Button
+
     private lateinit var sopIgaValue: TextView
     private lateinit var nasiUdukValue: TextView
     private lateinit var mieGorengValue: TextView
@@ -44,6 +47,7 @@ class mainapps : AppCompatActivity() {
         buttonMinEsTeh=findViewById(R.id.buttonMinEsTeh)
         buttonAddEsJeruk=findViewById(R.id.buttonAddEsJeruk)
         buttonMinEsJeruk=findViewById(R.id.buttonMinEsJeruk)
+        buttonSubmit=findViewById(R.id.buttonSubmit)
 
         //Value TextView
         sopIgaValue=findViewById(R.id.sopIgaValue)
@@ -135,6 +139,10 @@ class mainapps : AppCompatActivity() {
                 valueEsJeruk--
                 esJerukValue.text = valueEsJeruk.toString()
             }
+        }
+        buttonSubmit.setOnClickListener {
+            val intent = Intent(this, transactions::class.java)
+            startActivity(intent)
         }
     }
 }
