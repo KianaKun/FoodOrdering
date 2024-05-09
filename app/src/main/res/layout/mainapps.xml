@@ -1,76 +1,353 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <ScrollView
-        android:id="@+id/scrollView2"
-        android:layout_width="0dp"
-        android:layout_height="729dp"
-        android:layout_marginStart="1dp"
-        android:layout_marginEnd="1dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
-        tools:ignore="MissingConstraints">
-
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:id="@+id/scrollView2"
+            android:layout_width="360dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0">
 
-            <ImageView
-                android:id="@+id/imageView9"
-                android:layout_width="127dp"
-                android:layout_height="151dp"
-                android:layout_marginLeft="11dp"
-                android:layout_marginTop="10dp"
-                app:srcCompat="@drawable/sop_iga" />
+                <ImageView
+                    android:id="@+id/imageSopIga"
+                    android:layout_width="111dp"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginTop="30dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageNasiUduk"
+                    app:layout_constraintEnd_toStartOf="@+id/buttonMinEsTeh"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/sop_iga" />
 
-            <ImageView
-                android:id="@+id/imageView8"
-                android:layout_width="127dp"
-                android:layout_height="151dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="10dp"
-                app:srcCompat="@drawable/_371dbb7dedec4c27b0e09a8d49bcc6c" />
+                <Button
+                    android:id="@+id/buttonMinSop"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="200dp"
+                    android:layout_marginTop="-70dp"
+                    android:text="-"
+                    app:layout_constraintEnd_toEndOf="@+id/buttonAddNasiUduk"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/imageSopIga" />
 
-            <ImageView
-                android:id="@+id/imageView7"
-                android:layout_width="127dp"
-                android:layout_height="151dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="10dp"
-                app:srcCompat="@drawable/mie" />
+                <Button
+                    android:id="@+id/buttonAddSop"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="290dp"
+                    android:layout_marginTop="-48dp"
+                    android:text="+"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/buttonMinSop"
+                    app:layout_constraintEnd_toEndOf="@+id/buttonMinSop"
+                    app:layout_constraintStart_toStartOf="parent" />
 
-            <ImageView
-                android:id="@+id/imageView6"
-                android:layout_width="127dp"
-                android:layout_height="151dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="10dp"
-                app:srcCompat="@drawable/nasgor" />
+                <TextView
+                    android:id="@+id/textSopIga"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="245dp"
+                    android:layout_marginTop="-80dp"
+                    android:text="Sop Iga"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/sopIgaValue"
+                    app:layout_constraintStart_toStartOf="@+id/imageSopIga" />
 
-            <ImageView
-                android:id="@+id/imageView10"
-                android:layout_width="127dp"
-                android:layout_height="151dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="10dp"
-                app:srcCompat="@drawable/es_teh" />
+                <TextView
+                    android:id="@+id/sopIgaValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="265dp"
+                    android:layout_marginTop="70dp"
+                    android:text="0"
+                    app:layout_constraintStart_toStartOf="@+id/imageSopIga"
+                    app:layout_constraintTop_toTopOf="@+id/imageSopIga" />
 
-            <ImageView
-                android:id="@+id/imageView11"
-                android:layout_width="127dp"
-                android:layout_height="151dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="10dp"
-                app:srcCompat="@drawable/jeruk" />
+                <ImageView
+                    android:id="@+id/imageNasiUduk"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageMieGoreng"
+                    app:layout_constraintEnd_toEndOf="@+id/textNasiUduk"
+                    app:layout_constraintStart_toEndOf="@+id/textNasiUduk"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/_371dbb7dedec4c27b0e09a8d49bcc6c" />
+
+                <Button
+                    android:id="@+id/buttonAddNasiUduk"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="290dp"
+                    android:layout_marginTop="-70dp"
+                    android:text="+"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/buttonAddSop"
+                    app:layout_constraintEnd_toEndOf="@+id/buttonMinNasiUduk"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <Button
+                    android:id="@+id/buttonMinNasiUduk"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="200dp"
+                    android:layout_marginTop="-49dp"
+                    android:text="-"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/buttonAddSop"
+                    app:layout_constraintEnd_toEndOf="@+id/buttonAddMieGoreng"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <TextView
+                    android:id="@+id/textNasiUduk"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="240dp"
+                    android:layout_marginTop="-75dp"
+                    android:text="Nasi Uduk"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/textSopIga"
+                    app:layout_constraintStart_toStartOf="@+id/imageSopIga" />
+
+                <TextView
+                    android:id="@+id/nasiUdukValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="265dp"
+                    android:layout_marginTop="60dp"
+                    android:text="0"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/textSopIga"
+                    app:layout_constraintStart_toStartOf="@+id/imageSopIga" />
+
+                <ImageView
+                    android:id="@+id/imageMieGoreng"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageNasiGoreng"
+                    app:layout_constraintEnd_toStartOf="@+id/imageEsTeh"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/mie" />
+
+                <TextView
+                    android:id="@+id/textMieGoreng"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="230dp"
+                    android:layout_marginTop="-90dp"
+                    android:text="Mie Goreng"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/textSopIga"
+                    app:layout_constraintStart_toStartOf="@+id/imageSopIga" />
+
+                <Button
+                    android:id="@+id/buttonMinMieGoreng"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="200dp"
+                    android:layout_marginTop="5dp"
+                    android:text="-"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/buttonAddSop"
+                    app:layout_constraintEnd_toEndOf="@+id/buttonAddNasiGoreng"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <Button
+                    android:id="@+id/buttonAddNasiGoreng"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="290dp"
+                    android:layout_marginTop="-48dp"
+                    android:text="+"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/buttonAddSop"
+                    app:layout_constraintEnd_toEndOf="@+id/buttonMinNasiGoreng"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <TextView
+                    android:id="@+id/mieGorengValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="265dp"
+                    android:text="0"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/textSopIga"
+                    app:layout_constraintStart_toStartOf="@+id/imageSopIga" />
+
+                <ImageView
+                    android:id="@+id/imageNasiGoreng"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageEsTeh"
+                    app:layout_constraintEnd_toEndOf="@+id/textNasiUduk"
+                    app:layout_constraintStart_toEndOf="@+id/textNasiUduk"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/nasgor" />
+
+                <Button
+                    android:id="@+id/buttonAddMieGoreng"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="300dp"
+                    android:layout_marginTop="-65dp"
+                    android:text="+"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/buttonAddSop"
+                    app:layout_constraintEnd_toEndOf="@+id/buttonMinMieGoreng"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <TextView
+                    android:id="@+id/textNasiGoreng"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="240dp"
+                    android:layout_marginTop="-75dp"
+                    android:text="Nasi Goreng"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/textSopIga"
+                    app:layout_constraintStart_toStartOf="@+id/imageSopIga" />
+
+                <Button
+                    android:id="@+id/buttonMinNasiGoreng"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="200dp"
+                    android:layout_marginTop="6dp"
+                    android:text="-"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/buttonAddSop"
+                    app:layout_constraintEnd_toEndOf="@+id/textMieGoreng"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <TextView
+                    android:id="@+id/nasiGorengValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="270dp"
+                    android:text="0"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/textSopIga"
+                    app:layout_constraintStart_toStartOf="@+id/imageSopIga" />
+
+                <ImageView
+                    android:id="@+id/imageEsTeh"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageEsJeruk"
+                    app:layout_constraintEnd_toStartOf="@+id/imageEsJeruk"
+                    app:layout_constraintStart_toEndOf="@+id/imageMieGoreng"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/es_teh" />
+
+                <TextView
+                    android:id="@+id/textEsTeh"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="260dp"
+                    android:layout_marginTop="-90dp"
+                    android:text="Es Teh"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/textSopIga"
+                    app:layout_constraintStart_toStartOf="@+id/imageSopIga" />
+
+                <TextView
+                    android:id="@+id/esTehValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="270dp"
+                    android:layout_marginTop="50dp"
+                    android:text="0"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/textSopIga"
+                    app:layout_constraintStart_toStartOf="@+id/imageSopIga" />
+
+                <Button
+                    android:id="@+id/buttonAddEsTeh"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="300dp"
+                    android:layout_marginTop="-60dp"
+                    android:text="+"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/buttonAddEsJeruk"
+                    app:layout_constraintStart_toEndOf="@+id/buttonMinEsTeh" />
+
+                <Button
+                    android:id="@+id/buttonMinEsTeh"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="200dp"
+                    android:layout_marginTop="-49dp"
+                    android:text="-"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/buttonAddEsTeh"
+                    app:layout_constraintStart_toEndOf="@+id/imageEsJeruk" />
+
+                <ImageView
+                    android:id="@+id/imageEsJeruk"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginLeft="10dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/buttonMinEsTeh"
+                    app:layout_constraintStart_toEndOf="@+id/imageEsTeh"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/jeruk" />
+
+                <TextView
+                    android:id="@+id/textEsJeruk"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="250dp"
+                    android:layout_marginTop="-90dp"
+                    android:text="Es Jeruk"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/textSopIga"
+                    app:layout_constraintStart_toStartOf="@+id/imageSopIga" />
+
+                <TextView
+                    android:id="@+id/esJerukValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="270dp"
+                    android:layout_marginTop="60dp"
+                    android:text="0"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/textSopIga"
+                    app:layout_constraintStart_toStartOf="@+id/imageSopIga" />
+
+                <Button
+                    android:id="@+id/buttonAddEsJeruk"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="300dp"
+                    android:layout_marginTop="-70dp"
+                    android:text="+"
+                    app:layout_constraintBottom_toTopOf="@+id/buttonAddEsTeh"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/buttonAddEsTeh" />
+
+                <Button
+                    android:id="@+id/buttonMinEsJeruk"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="200dp"
+                    android:layout_marginTop="-50dp"
+                    android:text="-"
+                    app:layout_constraintBottom_toTopOf="@+id/buttonAddEsTeh"
+                    app:layout_constraintEnd_toEndOf="@+id/buttonSubmit"
+                    app:layout_constraintStart_toStartOf="@+id/buttonSubmit" />
+
+                <Button
+                    android:id="@+id/buttonSubmit"
+                    android:layout_width="362dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="100dp"
+                    android:text="Submit Pesanan"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/buttonMinEsTeh"
+                    app:layout_constraintEnd_toEndOf="parent" />
 
         </LinearLayout>
-    </ScrollView>
-</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
