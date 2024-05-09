@@ -28,8 +28,8 @@ class mainapps : AppCompatActivity() {
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.mainapps);
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.mainapps)
 
         // Value Button
         buttonAddSopIga=findViewById(R.id.buttonAddSopIga)
@@ -60,49 +60,70 @@ class mainapps : AppCompatActivity() {
         }
         buttonMinSopIga.setOnClickListener{
             var valueSopIga = sopIgaValue.text.toString().toInt()
-            valueSopIga--
-            sopIgaValue.text = valueSopIga.toString()
+            if (valueSopIga > 0){
+                valueSopIga--
+                sopIgaValue.text = valueSopIga.toString()
+
+            }
         }
+
         buttonAddNasiUduk.setOnClickListener{
             var valueNasiUduk = nasiUdukValue.text.toString().toInt()
             valueNasiUduk++
             nasiUdukValue.text = valueNasiUduk.toString()
         }
+
         buttonMinNasiUduk.setOnClickListener{
             var valueNasiUduk = nasiUdukValue.text.toString().toInt()
-            valueNasiUduk--
-            nasiUdukValue.text = valueNasiUduk.toString()
+            if (valueNasiUduk > 0){
+                valueNasiUduk--
+                nasiUdukValue.text = valueNasiUduk.toString()
+
+            }
         }
+
         buttonAddMieGoreng.setOnClickListener{
             var valueMieGoreng = mieGorengValue.text.toString().toInt()
             valueMieGoreng++
             mieGorengValue.text = valueMieGoreng.toString()
         }
+
         buttonMinMieGoreng.setOnClickListener{
             var valueMieGoreng = mieGorengValue.text.toString().toInt()
-            valueMieGoreng--
-            mieGorengValue.text = valueMieGoreng.toString()
+            if (valueMieGoreng > 0){
+                valueMieGoreng--
+                mieGorengValue.text = valueMieGoreng.toString()
+            }
         }
+
         buttonAddNasiGoreng.setOnClickListener{
             var valueNasiGoreng = nasiGorengValue.text.toString().toInt()
             valueNasiGoreng++
             nasiGorengValue.text = valueNasiGoreng.toString()
         }
+
         buttonMinNasiGoreng.setOnClickListener {
             var valueNasiGoreng = nasiGorengValue.text.toString().toInt()
-            valueNasiGoreng--
-            nasiGorengValue.text = valueNasiGoreng.toString()
+            if (valueNasiGoreng > 0){
+                valueNasiGoreng--
+                nasiGorengValue.text = valueNasiGoreng.toString()
+            }
         }
+
         buttonAddEsTeh.setOnClickListener {
             var valueEsTeh = esTehValue.text.toString().toInt()
             valueEsTeh++
             esTehValue.text = valueEsTeh.toString()
         }
+
         buttonMinEsTeh.setOnClickListener {
             var valueEsTeh = esTehValue.text.toString().toInt()
-            valueEsTeh--
-            esTehValue.text = valueEsTeh.toString()
+            if (valueEsTeh > 0){
+                valueEsTeh--
+                esTehValue.text = valueEsTeh.toString()
+            }
         }
+
         buttonAddEsJeruk.setOnClickListener {
             var valueEsJeruk = esJerukValue.text.toString().toInt()
             valueEsJeruk++
@@ -110,8 +131,10 @@ class mainapps : AppCompatActivity() {
         }
         buttonMinEsJeruk.setOnClickListener {
             var valueEsJeruk = esJerukValue.text.toString().toInt()
-            valueEsJeruk--
-            esJerukValue.text = valueEsJeruk.toString()
+            if (valueEsJeruk > 0){
+                valueEsJeruk--
+                esJerukValue.text = valueEsJeruk.toString()
+            }
         }
     }
 }
