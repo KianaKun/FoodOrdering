@@ -30,7 +30,7 @@
                     app:srcCompat="@drawable/sop_iga" />
 
                 <Button
-                    android:id="@+id/buttonMinSop"
+                    android:id="@+id/buttonMinSopIga"
                     android:layout_width="50dp"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="200dp"
@@ -41,7 +41,7 @@
                     app:layout_constraintTop_toTopOf="@+id/imageSopIga" />
 
                 <Button
-                    android:id="@+id/buttonAddSop"
+                    android:id="@+id/buttonAddSopIga"
                     android:layout_width="50dp"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="290dp"
@@ -158,17 +158,6 @@
                     app:layout_constraintEnd_toEndOf="@+id/buttonAddNasiGoreng"
                     app:layout_constraintStart_toStartOf="parent" />
 
-                <Button
-                    android:id="@+id/buttonAddNasiGoreng"
-                    android:layout_width="50dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="290dp"
-                    android:layout_marginTop="-48dp"
-                    android:text="+"
-                    app:layout_constraintBaseline_toBaselineOf="@+id/buttonAddSop"
-                    app:layout_constraintEnd_toEndOf="@+id/buttonMinNasiGoreng"
-                    app:layout_constraintStart_toStartOf="parent" />
-
                 <TextView
                     android:id="@+id/mieGorengValue"
                     android:layout_width="wrap_content"
@@ -177,18 +166,6 @@
                     android:text="0"
                     app:layout_constraintBaseline_toBaselineOf="@+id/textSopIga"
                     app:layout_constraintStart_toStartOf="@+id/imageSopIga" />
-
-                <ImageView
-                    android:id="@+id/imageNasiGoreng"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginTop="5dp"
-                    app:layout_constraintBottom_toBottomOf="@+id/imageEsTeh"
-                    app:layout_constraintEnd_toEndOf="@+id/textNasiUduk"
-                    app:layout_constraintStart_toEndOf="@+id/textNasiUduk"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/nasgor" />
 
                 <Button
                     android:id="@+id/buttonAddMieGoreng"
@@ -200,6 +177,18 @@
                     app:layout_constraintBaseline_toBaselineOf="@+id/buttonAddSop"
                     app:layout_constraintEnd_toEndOf="@+id/buttonMinMieGoreng"
                     app:layout_constraintStart_toStartOf="parent" />
+
+                <ImageView
+                    android:id="@+id/imageNasiGoreng"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="30dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageEsTeh"
+                    app:layout_constraintEnd_toEndOf="@+id/textNasiUduk"
+                    app:layout_constraintStart_toEndOf="@+id/textNasiUduk"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/nasgor" />
 
                 <TextView
                     android:id="@+id/textNasiGoreng"
@@ -220,6 +209,17 @@
                     android:text="-"
                     app:layout_constraintBaseline_toBaselineOf="@+id/buttonAddSop"
                     app:layout_constraintEnd_toEndOf="@+id/textMieGoreng"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <Button
+                    android:id="@+id/buttonAddNasiGoreng"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="290dp"
+                    android:layout_marginTop="-48dp"
+                    android:text="+"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/buttonAddSop"
+                    app:layout_constraintEnd_toEndOf="@+id/buttonMinNasiGoreng"
                     app:layout_constraintStart_toStartOf="parent" />
 
                 <TextView
