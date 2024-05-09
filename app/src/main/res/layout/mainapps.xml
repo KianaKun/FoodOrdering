@@ -6,41 +6,45 @@
     android:layout_height="match_parent">
 
     <ScrollView
-        android:layout_width="409dp"
+        android:id="@+id/scrollView2"
+        android:layout_width="0dp"
         android:layout_height="729dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0"
-        tools:layout_editor_absoluteX="1dp"
         tools:ignore="MissingConstraints">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:orientation="vertical">
 
             <ImageView
                 android:id="@+id/imageView9"
                 android:layout_width="127dp"
                 android:layout_height="151dp"
-                android:layout_marginTop="10dp"
                 android:layout_marginLeft="11dp"
+                android:layout_marginTop="10dp"
                 app:srcCompat="@drawable/sop_iga" />
 
             <ImageView
                 android:id="@+id/imageView8"
                 android:layout_width="127dp"
                 android:layout_height="151dp"
-                android:layout_marginTop="10dp"
                 android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
                 app:srcCompat="@drawable/_371dbb7dedec4c27b0e09a8d49bcc6c" />
 
             <ImageView
                 android:id="@+id/imageView7"
                 android:layout_width="127dp"
                 android:layout_height="151dp"
-                android:layout_marginTop="10dp"
                 android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
                 app:srcCompat="@drawable/mie" />
 
             <ImageView
@@ -55,16 +59,16 @@
                 android:id="@+id/imageView10"
                 android:layout_width="127dp"
                 android:layout_height="151dp"
-                android:layout_marginTop="10dp"
                 android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
                 app:srcCompat="@drawable/es_teh" />
 
             <ImageView
                 android:id="@+id/imageView11"
                 android:layout_width="127dp"
                 android:layout_height="151dp"
-                android:layout_marginTop="10dp"
                 android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
                 app:srcCompat="@drawable/jeruk" />
 
         </LinearLayout>
