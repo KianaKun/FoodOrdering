@@ -15,7 +15,7 @@ class inputuser : AppCompatActivity() {
     private lateinit var textPelayan: EditText
     private lateinit var textPelanggan: EditText
     private lateinit var nomorMeja: EditText
-    private var nextId = 0 // Initialize nextId to 0
+    private var nextId = 0
     private lateinit var ref: DatabaseReference
 
     override fun onCreate(savedInstanceState: Bundle?) {
