@@ -82,7 +82,6 @@ class mainapps : AppCompatActivity() {
             if (valueNasiUduk > 0){
                 valueNasiUduk--
                 nasiUdukValue.text = valueNasiUduk.toString()
-
             }
         }
 
@@ -142,6 +141,7 @@ class mainapps : AppCompatActivity() {
         }
         buttonSubmit.setOnClickListener {
             val intent = Intent(this, transactions::class.java)
+
             startActivity(intent)
         }
     }
