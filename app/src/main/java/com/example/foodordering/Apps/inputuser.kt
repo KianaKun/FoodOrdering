@@ -1,4 +1,4 @@
-package com.example.foodordering
+package com.example.foodordering.Apps // Assuming this is the correct package name
 
 import android.os.Bundle
 import android.widget.Button
@@ -6,6 +6,8 @@ import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
 import android.content.Intent
 import android.widget.Toast
+import com.example.foodordering.R
+import com.example.foodordering.Database.user // Assuming user.kt is in the package "Database"
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 
@@ -30,8 +32,9 @@ class inputuser : AppCompatActivity() {
         inputButton.setOnClickListener {
             val intent = Intent(this, mainapps::class.java)
 
-            if (textPelayan.text.isEmpty() && textPelanggan.text.isEmpty() && nomorMeja.text.isEmpty()) {
-                Toast.makeText(this, "Nama Pelayan atau Nama Pelanggan Kosong atau Meja Kosong", Toast.LENGTH_SHORT).show()
+            // Check for empty fields individually
+            if (textPelayan.text.isEmpty() || textPelanggan.text.isEmpty() || nomorMeja.text.isEmpty()) {
+                Toast.makeText(this, "Semua field harus diisi!", Toast.LENGTH_SHORT).show()
             } else {
 
                 // Handle potential NumberFormatException
@@ -46,12 +49,12 @@ class inputuser : AppCompatActivity() {
                     val user = user(nomormeja, pelayan, pelanggan)
                     ref.child(id).setValue(user).addOnSuccessListener {
                         Toast.makeText(this, "Data Berhasil Disimpan", Toast.LENGTH_SHORT).show()
+                        startActivity(intent)
                     }
                 } catch (e: NumberFormatException) {
                     Toast.makeText(this, "Please enter a valid number for table number", Toast.LENGTH_SHORT).show()
                 }
 
-                startActivity(intent)
             }
         }
     }
