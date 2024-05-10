@@ -23,7 +23,7 @@ class inputuser : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.inputuser)
-        ref = FirebaseDatabase.getInstance().getReference("transaksi")
+        ref = FirebaseDatabase.getInstance().getReference("user")
         inputButton = findViewById(R.id.inputButton)
         textPelayan = findViewById(R.id.TextPelayan)
         textPelanggan = findViewById(R.id.TextPelanggan)
@@ -42,8 +42,6 @@ class inputuser : AppCompatActivity() {
                     val nomormeja = nomorMeja.text.toString().toInt()
                     val pelayan = textPelayan.text.toString()
                     val pelanggan = textPelanggan.text.toString()
-
-                    // Increment nextId before generating ID
                     nextId++
                     val id = nextId.toString()
                     val user = user(nomormeja, pelayan, pelanggan)
@@ -52,7 +50,7 @@ class inputuser : AppCompatActivity() {
                         startActivity(intent)
                     }
                 } catch (e: NumberFormatException) {
-                    Toast.makeText(this, "Please enter a valid number for table number", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, "Masukan nomor meja!", Toast.LENGTH_SHORT).show()
                 }
 
             }

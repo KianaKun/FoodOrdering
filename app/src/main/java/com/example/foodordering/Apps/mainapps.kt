@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.foodordering.R
 
@@ -30,77 +31,76 @@ class mainapps : AppCompatActivity() {
     private lateinit var esJerukValue: TextView
 
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.mainapps)
 
         // Value Button
-        buttonAddSopIga=findViewById(R.id.buttonAddSopIga)
-        buttonMinSopIga=findViewById(R.id.buttonMinSopIga)
-        buttonAddNasiUduk=findViewById(R.id.buttonAddNasiUduk)
-        buttonMinNasiUduk=findViewById(R.id.buttonMinNasiUduk)
-        buttonAddMieGoreng=findViewById(R.id.buttonAddMieGoreng)
-        buttonMinMieGoreng=findViewById(R.id.buttonMinMieGoreng)
-        buttonAddNasiGoreng=findViewById(R.id.buttonAddNasiGoreng)
-        buttonMinNasiGoreng=findViewById(R.id.buttonMinNasiGoreng)
-        buttonAddEsTeh=findViewById(R.id.buttonAddEsTeh)
-        buttonMinEsTeh=findViewById(R.id.buttonMinEsTeh)
-        buttonAddEsJeruk=findViewById(R.id.buttonAddEsJeruk)
-        buttonMinEsJeruk=findViewById(R.id.buttonMinEsJeruk)
-        buttonSubmit=findViewById(R.id.buttonSubmit)
+        buttonAddSopIga = findViewById(R.id.buttonAddSopIga)
+        buttonMinSopIga = findViewById(R.id.buttonMinSopIga)
+        buttonAddNasiUduk = findViewById(R.id.buttonAddNasiUduk)
+        buttonMinNasiUduk = findViewById(R.id.buttonMinNasiUduk)
+        buttonAddMieGoreng = findViewById(R.id.buttonAddMieGoreng)
+        buttonMinMieGoreng = findViewById(R.id.buttonMinMieGoreng)
+        buttonAddNasiGoreng = findViewById(R.id.buttonAddNasiGoreng)
+        buttonMinNasiGoreng = findViewById(R.id.buttonMinNasiGoreng)
+        buttonAddEsTeh = findViewById(R.id.buttonAddEsTeh)
+        buttonMinEsTeh = findViewById(R.id.buttonMinEsTeh)
+        buttonAddEsJeruk = findViewById(R.id.buttonAddEsJeruk)
+        buttonMinEsJeruk = findViewById(R.id.buttonMinEsJeruk)
+        buttonSubmit = findViewById(R.id.buttonSubmit)
 
         //Value TextView
-        sopIgaValue=findViewById(R.id.sopIgaValue)
-        nasiUdukValue=findViewById(R.id.nasiUdukValue)
-        mieGorengValue=findViewById(R.id.mieGorengValue)
-        nasiGorengValue=findViewById(R.id.nasiGorengValue)
-        esTehValue=findViewById(R.id.esTehValue)
-        esJerukValue=findViewById(R.id.esJerukValue)
+        sopIgaValue = findViewById(R.id.sopIgaValue)
+        nasiUdukValue = findViewById(R.id.nasiUdukValue)
+        mieGorengValue = findViewById(R.id.mieGorengValue)
+        nasiGorengValue = findViewById(R.id.nasiGorengValue)
+        esTehValue = findViewById(R.id.esTehValue)
+        esJerukValue = findViewById(R.id.esJerukValue)
 
-        buttonAddSopIga.setOnClickListener{
+        buttonAddSopIga.setOnClickListener {
             var valueSopIga = sopIgaValue.text.toString().toInt()
             valueSopIga++
             sopIgaValue.text = valueSopIga.toString()
         }
-        buttonMinSopIga.setOnClickListener{
+        buttonMinSopIga.setOnClickListener {
             var valueSopIga = sopIgaValue.text.toString().toInt()
-            if (valueSopIga > 0){
+            if (valueSopIga > 0) {
                 valueSopIga--
                 sopIgaValue.text = valueSopIga.toString()
 
             }
         }
 
-        buttonAddNasiUduk.setOnClickListener{
+        buttonAddNasiUduk.setOnClickListener {
             var valueNasiUduk = nasiUdukValue.text.toString().toInt()
             valueNasiUduk++
             nasiUdukValue.text = valueNasiUduk.toString()
         }
 
-        buttonMinNasiUduk.setOnClickListener{
+        buttonMinNasiUduk.setOnClickListener {
             var valueNasiUduk = nasiUdukValue.text.toString().toInt()
-            if (valueNasiUduk > 0){
+            if (valueNasiUduk > 0) {
                 valueNasiUduk--
                 nasiUdukValue.text = valueNasiUduk.toString()
             }
         }
 
-        buttonAddMieGoreng.setOnClickListener{
+        buttonAddMieGoreng.setOnClickListener {
             var valueMieGoreng = mieGorengValue.text.toString().toInt()
             valueMieGoreng++
             mieGorengValue.text = valueMieGoreng.toString()
         }
 
-        buttonMinMieGoreng.setOnClickListener{
+        buttonMinMieGoreng.setOnClickListener {
             var valueMieGoreng = mieGorengValue.text.toString().toInt()
-            if (valueMieGoreng > 0){
+            if (valueMieGoreng > 0) {
                 valueMieGoreng--
                 mieGorengValue.text = valueMieGoreng.toString()
             }
         }
 
-        buttonAddNasiGoreng.setOnClickListener{
+        buttonAddNasiGoreng.setOnClickListener {
             var valueNasiGoreng = nasiGorengValue.text.toString().toInt()
             valueNasiGoreng++
             nasiGorengValue.text = valueNasiGoreng.toString()
@@ -108,7 +108,7 @@ class mainapps : AppCompatActivity() {
 
         buttonMinNasiGoreng.setOnClickListener {
             var valueNasiGoreng = nasiGorengValue.text.toString().toInt()
-            if (valueNasiGoreng > 0){
+            if (valueNasiGoreng > 0) {
                 valueNasiGoreng--
                 nasiGorengValue.text = valueNasiGoreng.toString()
             }
@@ -122,7 +122,7 @@ class mainapps : AppCompatActivity() {
 
         buttonMinEsTeh.setOnClickListener {
             var valueEsTeh = esTehValue.text.toString().toInt()
-            if (valueEsTeh > 0){
+            if (valueEsTeh > 0) {
                 valueEsTeh--
                 esTehValue.text = valueEsTeh.toString()
             }
@@ -135,7 +135,7 @@ class mainapps : AppCompatActivity() {
         }
         buttonMinEsJeruk.setOnClickListener {
             var valueEsJeruk = esJerukValue.text.toString().toInt()
-            if (valueEsJeruk > 0){
+            if (valueEsJeruk > 0) {
                 valueEsJeruk--
                 esJerukValue.text = valueEsJeruk.toString()
             }
@@ -143,7 +143,18 @@ class mainapps : AppCompatActivity() {
         buttonSubmit.setOnClickListener {
             val intent = Intent(this, transactions::class.java)
 
-            startActivity(intent)
+            try {
+                intent.putExtra("sopIga", sopIgaValue.text.toString().toInt())
+                intent.putExtra("nasiUduk", nasiUdukValue.text.toString().toInt())
+                intent.putExtra("mieGoreng", mieGorengValue.text.toString().toInt())
+                intent.putExtra("nasiGoreng", nasiGorengValue.text.toString().toInt())
+                intent.putExtra("esTeh", esTehValue.text.toString().toInt())
+                intent.putExtra("esJeruk", esJerukValue.text.toString().toInt())
+                startActivity(intent)
+            } catch (e: NumberFormatException) {
+                // Handle the error case (e.g., display a message indicating invalid input)
+                Toast.makeText(this, "Invalid quantity input. Please enter numbers.", Toast.LENGTH_SHORT).show()
+                }
         }
     }
 }
