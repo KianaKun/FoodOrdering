@@ -141,20 +141,32 @@ class mainapps : AppCompatActivity() {
             }
         }
         buttonSubmit.setOnClickListener {
+            val userData = intent.extras // Get data from the Intent that started mainapps
             val intent = Intent(this, transactions::class.java)
 
-            try {
-                intent.putExtra("sopIga", sopIgaValue.text.toString().toInt())
-                intent.putExtra("nasiUduk", nasiUdukValue.text.toString().toInt())
-                intent.putExtra("mieGoreng", mieGorengValue.text.toString().toInt())
-                intent.putExtra("nasiGoreng", nasiGorengValue.text.toString().toInt())
-                intent.putExtra("esTeh", esTehValue.text.toString().toInt())
-                intent.putExtra("esJeruk", esJerukValue.text.toString().toInt())
-                startActivity(intent)
-            } catch (e: NumberFormatException) {
-                // Handle the error case (e.g., display a message indicating invalid input)
-                Toast.makeText(this, "Invalid quantity input. Please enter numbers.", Toast.LENGTH_SHORT).show()
+            if (userData != null) {
+                val pelayan = userData.getString("pelayan") ?: ""
+                val pelanggan = userData.getString("pelanggan") ?: ""
+                val nomorMeja = userData.getInt("nomorMeja", 0)
+
+                try {
+                    intent.putExtra("pelayan", pelayan)
+                    intent.putExtra("pelanggan", pelanggan)
+                    intent.putExtra("nomorMeja", nomorMeja)
+                    intent.putExtra("sopIga", sopIgaValue.text.toString().toInt())
+                    intent.putExtra("nasiUduk", nasiUdukValue.text.toString().toInt())
+                    intent.putExtra("mieGoreng", mieGorengValue.text.toString().toInt())
+                    intent.putExtra("nasiGoreng", nasiGorengValue.text.toString().toInt())
+                    intent.putExtra("esTeh", esTehValue.text.toString().toInt())
+                    intent.putExtra("esJeruk", esJerukValue.text.toString().toInt())
+                    startActivity(intent)
+                    finish()
+                } catch (e: NumberFormatException) {
+                    // Handle the error case (e.g., display a message indicating invalid input)
+                    Toast.makeText(this, "Invalid quantity input. Please enter numbers.", Toast.LENGTH_SHORT).show()
                 }
+            }
+            startActivity(intent)
         }
     }
 }

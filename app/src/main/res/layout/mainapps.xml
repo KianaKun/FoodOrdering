@@ -55,6 +55,7 @@
                     android:layout_marginLeft="245dp"
                     android:layout_marginTop="-80dp"
                     android:text="Sop Iga"
+                    android:textColor="@color/black"
                     app:layout_constraintBaseline_toBaselineOf="@+id/sopIgaValue"
                     app:layout_constraintStart_toStartOf="@+id/imageSopIga" />
 
@@ -65,6 +66,7 @@
                     android:layout_marginLeft="265dp"
                     android:layout_marginTop="70dp"
                     android:text="0"
+                    android:textColor="@color/black"
                     app:layout_constraintStart_toStartOf="@+id/imageSopIga"
                     app:layout_constraintTop_toTopOf="@+id/imageSopIga" />
 
@@ -109,6 +111,7 @@
                     android:layout_marginLeft="240dp"
                     android:layout_marginTop="-75dp"
                     android:text="Nasi Uduk"
+                    android:textColor="@color/black"
                     app:layout_constraintBaseline_toBaselineOf="@+id/textSopIga"
                     app:layout_constraintStart_toStartOf="@+id/imageSopIga" />
 
@@ -119,6 +122,7 @@
                     android:layout_marginLeft="265dp"
                     android:layout_marginTop="60dp"
                     android:text="0"
+                    android:textColor="@color/black"
                     app:layout_constraintBaseline_toBaselineOf="@+id/textSopIga"
                     app:layout_constraintStart_toStartOf="@+id/imageSopIga" />
 
@@ -141,6 +145,7 @@
                     android:layout_marginLeft="230dp"
                     android:layout_marginTop="-90dp"
                     android:text="Mie Goreng"
+                    android:textColor="@color/black"
                     app:layout_constraintBaseline_toBaselineOf="@+id/textSopIga"
                     app:layout_constraintStart_toStartOf="@+id/imageSopIga" />
 
@@ -161,6 +166,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="265dp"
                     android:text="0"
+                    android:textColor="@color/black"
                     app:layout_constraintBaseline_toBaselineOf="@+id/textSopIga"
                     app:layout_constraintStart_toStartOf="@+id/imageSopIga" />
 
@@ -168,7 +174,7 @@
                     android:id="@+id/buttonAddMieGoreng"
                     android:layout_width="50dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="300dp"
+                    android:layout_marginLeft="290dp"
                     android:layout_marginTop="-65dp"
                     android:text="+"
                     app:layout_constraintBaseline_toBaselineOf="@+id/buttonAddSop"
@@ -194,6 +200,7 @@
                     android:layout_marginLeft="240dp"
                     android:layout_marginTop="-75dp"
                     android:text="Nasi Goreng"
+                    android:textColor="@color/black"
                     app:layout_constraintBaseline_toBaselineOf="@+id/textSopIga"
                     app:layout_constraintStart_toStartOf="@+id/imageSopIga" />
 
@@ -225,6 +232,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="270dp"
                     android:text="0"
+                    android:textColor="@color/black"
                     app:layout_constraintBaseline_toBaselineOf="@+id/textSopIga"
                     app:layout_constraintStart_toStartOf="@+id/imageSopIga" />
 
@@ -247,6 +255,7 @@
                     android:layout_marginLeft="260dp"
                     android:layout_marginTop="-90dp"
                     android:text="Es Teh"
+                    android:textColor="@color/black"
                     app:layout_constraintBaseline_toBaselineOf="@+id/textSopIga"
                     app:layout_constraintStart_toStartOf="@+id/imageSopIga" />
 
@@ -257,6 +266,7 @@
                     android:layout_marginLeft="270dp"
                     android:layout_marginTop="50dp"
                     android:text="0"
+                    android:textColor="@color/black"
                     app:layout_constraintBaseline_toBaselineOf="@+id/textSopIga"
                     app:layout_constraintStart_toStartOf="@+id/imageSopIga" />
 
@@ -264,7 +274,7 @@
                     android:id="@+id/buttonAddEsTeh"
                     android:layout_width="50dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="300dp"
+                    android:layout_marginLeft="290dp"
                     android:layout_marginTop="-60dp"
                     android:text="+"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -302,6 +312,7 @@
                     android:layout_marginLeft="250dp"
                     android:layout_marginTop="-90dp"
                     android:text="Es Jeruk"
+                    android:textColor="@android:color/black"
                     app:layout_constraintBaseline_toBaselineOf="@+id/textSopIga"
                     app:layout_constraintStart_toStartOf="@+id/imageSopIga" />
 
@@ -312,6 +323,7 @@
                     android:layout_marginLeft="270dp"
                     android:layout_marginTop="60dp"
                     android:text="0"
+                    android:textColor="@color/black"
                     app:layout_constraintBaseline_toBaselineOf="@+id/textSopIga"
                     app:layout_constraintStart_toStartOf="@+id/imageSopIga" />
 
@@ -319,8 +331,8 @@
                     android:id="@+id/buttonAddEsJeruk"
                     android:layout_width="50dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="300dp"
-                    android:layout_marginTop="-70dp"
+                    android:layout_marginLeft="290dp"
+                    android:layout_marginTop="-65dp"
                     android:text="+"
                     app:layout_constraintBottom_toTopOf="@+id/buttonAddEsTeh"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -331,7 +343,7 @@
                     android:layout_width="50dp"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="200dp"
-                    android:layout_marginTop="-50dp"
+                    android:layout_marginTop="-48dp"
                     android:text="-"
                     app:layout_constraintBottom_toTopOf="@+id/buttonAddEsTeh"
                     app:layout_constraintEnd_toEndOf="@+id/buttonSubmit"
@@ -339,7 +351,7 @@
 
                 <Button
                     android:id="@+id/buttonSubmit"
-                    android:layout_width="362dp"
+                    android:layout_width="332dp"
                     android:layout_height="57dp"
                     android:layout_marginLeft="15dp"
                     android:layout_marginTop="100dp"
