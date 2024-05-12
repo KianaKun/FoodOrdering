@@ -8,6 +8,7 @@ import android.content.Intent
 import android.widget.Toast
 import com.example.foodordering.R
 
+
 class inputuser : AppCompatActivity() {
 
     private lateinit var inputButton: Button
@@ -30,11 +31,12 @@ class inputuser : AppCompatActivity() {
                 Toast.makeText(this, "Semua field harus diisi!", Toast.LENGTH_SHORT).show()
             } else {
                 try {
-                    val userData = Bundle() // Create a Bundle to store user data
+
+                    val userData = Bundle()
                     userData.putString("pelayan", textPelayan.text.toString())
                     userData.putString("pelanggan", textPelanggan.text.toString())
                     userData.putInt("nomorMeja", nomorMeja.text.toString().toInt())
-                    nextScene.putExtras(userData) // Add data to the Intent
+                    nextScene.putExtras(userData)
                     finish()
                     startActivity(nextScene)
                 } catch (e: NumberFormatException) {
@@ -43,5 +45,10 @@ class inputuser : AppCompatActivity() {
 
             }
         }
+    }
+
+        override fun onBackPressed() {
+        super.onBackPressed()
+            finishAffinity()
     }
 }
